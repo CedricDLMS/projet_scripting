@@ -1,0 +1,8 @@
+# Exécution quotidienne des scripts Bash à 2h du matin
+0 2 * * * /chemin/vers/scan_ports.sh 192.168.1.0/24
+0 2 * * * /chemin/vers/analyse_logs.sh
+
+# Exécution quotidienne des scripts Python à 8h30 du matin
+30 8 * * * /usr/bin/python3 /chemin/vers/analyse_scan.py /chemin/vers/nmap_scan_192.168.1.0_24.txt
+30 8 * * * /usr/bin/python3 /chemin/vers/scan_unused_users.py
+30 8 * * * /usr/bin/python3 /chemin/vers/analyse_logs.py

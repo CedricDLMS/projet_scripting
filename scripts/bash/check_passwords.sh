@@ -27,7 +27,7 @@ if ! [[ "$password" =~ [0-9] ]]; then
     exit 1
 fi
 
-if ! [[ "$password" =~ [\!\@\#\$\%\^\&\*\(\)\_\+\-=\{\}\[\]\:\;\"\'\<\>\,\.\?\/] ]]; then
+if ! [[ "$password" =~ [[:punct:]] ]]; then
     echo "Erreur : Le mot de passe doit contenir au moins un caractère spécial."
     exit 1
 fi
